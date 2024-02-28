@@ -1,0 +1,73 @@
+.card {
+  height: 400px;
+  width: 330px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+
+  .cardProfile,
+  .cardInfo,
+  .cardIcons {
+    width: 100%;
+  }
+
+  .cardProfile {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
+
+    img {
+      object-fit: contain;
+      //   width: 30px;
+      height: 100%;
+    }
+  }
+
+  .cardInfo {
+    height: 45%;
+    padding-top: 30px;
+    padding-left: 30px;
+
+    .infoHead {
+      margin-bottom: 15px;
+    }
+
+    .emailInfo,
+    .phoneInfo,
+    .webInfo {
+      display: flex;
+      gap: 10px;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .cardFooter {
+    height: 15%;
+    background: #fafafa;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .footIcons {
+      font-size: 22px;
+      position: relative;
+
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        left: 300%;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 90%;
+        width: 1px;
+        background-color: #eaeaea;
+      }
+
+      &:first-child {
+        color: red;
+        font-weight: bold;
+      }
+    }
+  }
+}
